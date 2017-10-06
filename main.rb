@@ -11,6 +11,6 @@ result.each do |row|
   if row == 1
     puts row
   else
-    puts row.join(" ")
+    puts row.join(" ").center(result.last.length+20)
   end
 end
