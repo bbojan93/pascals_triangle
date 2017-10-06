@@ -5,10 +5,10 @@ class Triangle
   end
 
   def print_triangle
-    if @rows == 0
-      return [1]
-    elsif @rows == 1
-      return [[1], [1, 1]]
+    if @rows == 1
+      result = [1]
+    elsif @rows == 2
+      result = [[1], [1, 1]]
     else
       result = [[1], [1, 1]]
 

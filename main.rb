@@ -1,11 +1,16 @@
 require "./lib/pascals_triangle.rb"
 
 puts "insert number of rows"
-input = gets.chomp.to_i
-triangle = Triangle.new(input)
+rows = gets.chomp.to_i
+triangle = Triangle.new(rows)
 
 puts "Your result is:"
 result = triangle.print_triangle
+
 result.each do |row|
-  puts row.join(" ")
+  if row == 1
+    puts row
+  else
+    puts row.join(" ")
+  end
 end
