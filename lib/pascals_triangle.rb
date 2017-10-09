@@ -4,30 +4,22 @@ class Triangle
     @rows = rows
   end
 
-  def print_triangle
+  def generate_rows
     if @rows == 1
       result = [1]
-    elsif @rows == 2
-      result = [[1], [1, 1]]
-    else
+    elsif @rows >= 2
       result = [[1], [1, 1]]
 
-      previous_row = [1, 1]
-      n=3
-      while n <= @rows
+      (@rows-2).times do |n|
         next_row = [1]
 
-        i = 0
-        while i < previous_row.length - 1
-          sum = previous_row[i] + previous_row[i+1]
+        (result.last.length-1).times do |n|
+          sum = result.last[n] + result.last[n+1]
           next_row << sum
-          i+=1
         end
 
         next_row << 1
         result << next_row
-        previous_row = next_row
-        n+=1
       end
 
     end

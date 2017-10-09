@@ -5,7 +5,7 @@ rows = gets.chomp.to_i
 triangle = Triangle.new(rows)
 
 puts "Your result is:"
-result = triangle.print_triangle
+result = triangle.generate_rows
 
 result.each do |row|
   if row == 1
